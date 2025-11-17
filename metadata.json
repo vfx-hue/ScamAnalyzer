@@ -1,0 +1,5 @@
+{
+  "name": "Multi-Channel Scam Analyzer",
+  "description": "An AI-powered tool to analyze SMS messages, emails, and voicemails for potential scams. It provides a risk score, highlights red flags, and offers actionable advice, all with a privacy-first approach.",
+  "requestFramePermissions": []
+}
