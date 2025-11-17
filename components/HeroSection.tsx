@@ -23,11 +23,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ navigateTo }) => {
         breathingRange={15}
         animationSpeed={0.015}
         topOffset={-150}
-        containerClassName="opacity-50"
+        containerClassName="opacity-60 -z-20"
       />
-      <DottedSurface />
+      <DottedSurface className="-z-10" />
 
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-0">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight">
             Get Instant<br />

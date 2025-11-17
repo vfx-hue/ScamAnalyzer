@@ -25,7 +25,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		const AMOUNTY = 60;
 
 		const scene = new THREE.Scene();
-		scene.fog = new THREE.Fog(isDarkMode ? 0x020617 : 0xffffff, 2000, 10000);
+		// scene.fog = new THREE.Fog(isDarkMode ? 0x020617 : 0xffffff, 2000, 10000); // Removed fog to allow background to show through
 
 		const camera = new THREE.PerspectiveCamera(
 			60,
@@ -41,7 +41,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		});
 		renderer.setPixelRatio(window.devicePixelRatio);
 		renderer.setSize(window.innerWidth, window.innerHeight);
-		renderer.setClearColor(scene.fog.color, 0);
+		renderer.setClearColor(0x000000, 0); // Set a fully transparent background
 
 		containerRef.current.appendChild(renderer.domElement);
 
@@ -157,7 +157,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 	return (
 		<div
 			ref={containerRef}
-			className={cn('pointer-events-none fixed inset-0 -z-10', className)}
+			className={cn('pointer-events-none absolute inset-0', className)}
 			{...props}
 		/>
 	);
